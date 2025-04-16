@@ -2,11 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
     const opcoesDeAcessibilidade = document.getElementById ('opcoes-acessibilidade');
 
+
+
     botaoAcessibilidade.addEventListener('click', function (){
         botaoAcessibilidade.classList.toggle('rotacao-botao');
         opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
     })
 
+    const alternaContraste = document.getElementById('alterna-contraste')
+
+    alternaContraste.addEventListener('click', function(){
+        document.body.classList.toggle('alto-contraste')
+    })
+    
     let tamanhoAtualFonte = 1;
 
     const aumentaFonteBotao = document.getElementById('aumentar-fonte'); 
